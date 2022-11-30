@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+public class OptionMenu extends Account {
+	Scanner menuInput = new Scanner(System.in);
+	DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
+
+	HashMap<Integer, Integer> data = new HashMap<Integer, Integer>();
+
+	/* Validate Login information customer number and pin number */
+
+	public void getLogin() throws IOException {
+		int x = 1;
+
+		do {
+			try {
+				/*
+				 * Accounts in a HashMap, key = customer number, value = pin
+				 * number
+				 */
+				data.put(123456789, 1234);
+				data.put(123456780, 1230);
+
+				System.out.println("Welcome to the ATM Project!");
